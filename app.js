@@ -15,7 +15,7 @@ app.use(express.static('./public'));
 app.use('/books',booksRouter);
 app.use('/authors',authorRouter);
 app.set('view engine','ejs');
-app.set('views','./src/views');
+app.set('views','./');
 app.get('/',function(req,res){
     res.render("index",
     {
@@ -27,7 +27,7 @@ app.get('/',function(req,res){
 
 
 app.get('/sign_up',function(req,res){
-    res.render("sign_up",
+    res.render("src/views/sign_up",
     {
         nav,
         title:'library'
@@ -36,7 +36,7 @@ app.get('/sign_up',function(req,res){
 });
 
 app.get('/login',function(req,res){
-    res.render("login",
+    res.render("src/views/login",
     {
         nav,
         title:'library'

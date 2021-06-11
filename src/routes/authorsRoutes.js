@@ -18,7 +18,7 @@ function router(nav){
 
 ];
 authorRouter.get('/',function(req,res){
-    res.render("src/views/authors",
+    res.render("authors",
     {
         nav,
         title:'library',
@@ -29,7 +29,7 @@ authorRouter.get('/',function(req,res){
 
 authorRouter.get('/:id1',function(req,res){
     const id1 = req.params.id1;
-    res.render("src/views/author",
+    res.render("author",
     {
         nav,
         title:'library',
